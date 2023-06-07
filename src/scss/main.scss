@@ -1,8 +1,31 @@
+@import "bootstrap/scss/bootstrap-grid";
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(../fonts/Satoshi-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Satoshi-bold";
+  src: url(../fonts/Satoshi-Bold.woff2);
+}
+// .example {
+//   font-family: "jetlab-variable",sans-serif;
+//   font-variation-settings: 'THRU' 96, 'VERT' 73, 'HORZ' 100, 'LIFT' 54;
+// }
+
 /* ====================================
 // css variables
 // ==================================== */
 
 :root {
+  --title: "jetlab-variable", sans-serif;
+  --title-variable: "THRU" 96, "VERT" 73, "HORZ" 100, "LIFT" 54;
+  --text: "Satoshi", sans-serif;
+  --green: #a2ff00;
+  --purple: #9b36f2;
+  --black: #000011;
+  --white: #fff;
 }
 
 /* ====================================
@@ -42,3 +65,144 @@ video {
 /* ====================================
 // base rules
 // ==================================== */
+
+/* base ↓ */
+
+html {
+  font-family: var(--text);
+  background-color: var(--black);
+}
+
+h2,
+h3,
+h4 {
+  font-family: var(--title);
+  font-variation-settings: var(--title-variable);
+}
+
+.pitcure {
+  height: 100%;
+  width: 50%;
+}
+
+/* layout ↓ */
+
+/* button ↓ */
+
+.button {
+  background: none;
+  border: solid 1px var(--white);
+  border-radius: 7px;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: var(--text-bold);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+.button a:hover {
+  color: var(--green);
+}
+
+.button span {
+  user-select: none;
+}
+
+.button:hover {
+  border: var(--green);
+  scale: 1.1;
+}
+
+.button:active {
+  scale: 0.95;
+}
+
+.button-container {
+  margin: 10px 0 90px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*  header ↓ */
+
+.header {
+  box-shadow: 0 2px 15px #612e021a;
+  background: var(--black);
+  position: sticky;
+  padding: 20px;
+  position: relative;
+  z-index: 1000;
+  top: 0;
+  color: var(--white);
+}
+
+.header-holder {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+  }
+}
+
+.language {
+  background: none;
+  border: solid 1px var(--white);
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3px 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 2px 3px;
+
+  a {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  // a:hover {
+  //   color: var(--green);
+  // }
+}
+
+.language-selection {
+  background-color: var(--white);
+  z-index: 300;
+  border-radius: 7px;
+  padding: 12px 23px;
+  position: absolute;
+  right: 98px;
+}
+
+.language-selected {
+  color: var(--black);
+  z-index: 1000;
+}
+
+/*  main, eikonica/introduction ↓ */
+
+.l-tuile-green {
+  background-color: var(--green);
+}
+
+/*  main, slider show ↓ */
+
+/*  main, programme ↓ */
+
+/*  main, concert ↓ */
+
+/*  main, food-trucks ↓ */
+
+/*  footer ↓ */
