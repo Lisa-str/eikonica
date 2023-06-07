@@ -22,6 +22,7 @@
   --title: "jetlab-variable", sans-serif;
   --title-variable: "THRU" 96, "VERT" 73, "HORZ" 100, "LIFT" 54;
   --text: "Satoshi", sans-serif;
+  --text-bold: "Satoshi-bold", sans-serif;
   --green: #a2ff00;
   --purple: #9b36f2;
   --black: #000011;
@@ -83,6 +84,12 @@ h4 {
   padding-bottom: 50px;
 }
 
+p {
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 31px;
+}
+
 /* picture ↓ */
 
 .picture {
@@ -108,14 +115,17 @@ h4 {
 
 .button {
   background: none;
-  border: solid 1px var(--white);
+  border: solid 1.5px var(--black);
   border-radius: 7px;
   padding: 10px 25px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
+  letter-spacing: 0;
   font-family: var(--text-bold);
   transition: all 0.3s ease-in-out;
   display: inline-block;
+  text-align: center;
+  margin-right: 20px;
 }
 
 .button a {
@@ -140,8 +150,9 @@ h4 {
 }
 
 .button-container {
-  margin: 10px 0 90px 0px;
+  margin-top: 10px;
   transition: all 0.3s ease-in-out;
+  padding-top: 50px;
 }
 
 /*  header ↓ */
@@ -277,7 +288,7 @@ nav {
 /*  defiling ↓ */
 
 .text-defiling {
-  animation-duration: 10s;
+  animation-duration: 90s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -293,6 +304,7 @@ nav {
   top: 0;
   user-select: none;
   overflow: hidden;
+  display: flex;
 }
 
 .text {
@@ -308,13 +320,61 @@ nav {
   // position: absolute;
 }
 
+.schedule {
+  animation-name: TextDefiling;
+  font-family: var(--title);
+  font-variation-settings: var(--title-variable);
+  -webkit-text-stroke: var(--black) 2px;
+  font-size: 151px;
+  color: #00000000;
+  letter-spacing: 7.67px;
+  line-height: 135px;
+}
+
+.schedule-left {
+  animation-name: TextDefiling;
+}
+
+.schedule-right {
+  animation-name: TextDefilingRight;
+}
+
+.schedule-defiling {
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.schedule-defiling-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
 @keyframes TextDefiling {
   0% {
     transform: translateY(0%);
   }
 
   100% {
-    transform: translateY(-50%);
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes TextDefilingRight {
+  0% {
+    transform: translateY(-30%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }
 
