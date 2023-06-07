@@ -111,6 +111,16 @@ p {
   padding: 100px 0;
 }
 
+.l-tuile-purple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.l-tuile-green {
+  background-color: var(--green);
+  color: var(--balck);
+}
+
 /* button ↓ */
 
 .button {
@@ -317,7 +327,6 @@ nav {
   -webkit-text-stroke: var(--black) 2px;
   line-height: 122px;
   white-space: nowrap;
-  // position: absolute;
 }
 
 .schedule {
@@ -329,6 +338,17 @@ nav {
   color: #00000000;
   letter-spacing: 7.67px;
   line-height: 135px;
+}
+
+.schedule-noon {
+  animation-name: TextDefiling;
+  font-family: var(--title);
+  font-variation-settings: var(--title-variable);
+  -webkit-text-stroke: var(--white) 2px;
+  font-size: 113px;
+  color: #ffffff00;
+  letter-spacing: 5.38px;
+  line-height: 100px;
 }
 
 .schedule-left {
@@ -350,9 +370,9 @@ nav {
   overflow: hidden;
 }
 
-.schedule-container {
+.text-container-left {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   user-select: none;
   overflow: hidden;
