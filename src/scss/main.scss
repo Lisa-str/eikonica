@@ -39,7 +39,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 body {
@@ -78,14 +78,31 @@ h3,
 h4 {
   font-family: var(--title);
   font-variation-settings: var(--title-variable);
+  font-size: 73px;
+  letter-spacing: 1.5px;
+  padding-bottom: 50px;
 }
 
-.pitcure {
+/* picture ↓ */
+
+.picture {
   height: 100%;
   width: 50%;
 }
 
+.picture-show {
+  padding: 30px 12.5px 15px;
+}
+
+.picture-show-bottom {
+  padding: 15px 12.5px 30px;
+}
+
 /* layout ↓ */
+
+.l-tuile {
+  padding: 100px 0;
+}
 
 /* button ↓ */
 
@@ -186,9 +203,168 @@ nav {
   right: 98px;
 }
 
+@media (max-width: 992px) {
+  .language-selection {
+    right: 73px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .language-selection {
+    right: 87px;
+  }
+}
+
+// ipad air
+@media (min-width: 1180px) {
+  .language-selection {
+    right: 92px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .language-selection {
+    right: 103px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .language-selection {
+    right: 112px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .language-selection {
+    right: 114px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .language-selection {
+    right: 120px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .language-selection {
+    right: 126px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .language-selection {
+    right: 132px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .language-selection {
+    right: 138px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .language-selection {
+    right: 144px;
+  }
+}
+
 .language-selected {
   color: var(--black);
   z-index: 1000;
+}
+/*  defiling ↓ */
+
+.text-defiling {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.text-defiling-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+.text {
+  animation-name: TextDefiling;
+  font-family: var(--title);
+  font-variation-settings: var(--title-variable);
+  font-size: 135px;
+  letter-spacing: 6.43px;
+  color: #00000000;
+  -webkit-text-stroke: var(--black) 2px;
+  line-height: 122px;
+  white-space: nowrap;
+  // position: absolute;
+}
+
+@keyframes TextDefiling {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/*  main, show, defiling show ↓ */
+
+.show {
+  display: flex;
+  align-items: center;
+  animation-name: ChangeDirection;
+}
+
+.show-bottom {
+  display: flex;
+  align-items: center;
+  animation-name: ChangeDirectionBottom;
+}
+
+.show-container {
+  background-color: var(--purple);
+  overflow: hidden;
+}
+
+.defiling-show {
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.show-defiling-container {
+  overflow: hidden;
+}
+
+@keyframes ChangeDirection {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes ChangeDirectionBottom {
+  0% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /*  main, eikonica/introduction ↓ */
@@ -196,8 +372,6 @@ nav {
 .l-tuile-green {
   background-color: var(--green);
 }
-
-/*  main, slider show ↓ */
 
 /*  main, programme ↓ */
 
