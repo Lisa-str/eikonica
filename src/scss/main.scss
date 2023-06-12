@@ -190,6 +190,16 @@ a {
   right: -1%;
 }
 
+.picture-decoration {
+  position: absolute;
+  bottom: 30%;
+  left: 70%;
+}
+
+.picture-decoration-container {
+  position: relative;
+}
+
 /* layout ↓ */
 
 .l-tile {
@@ -569,15 +579,13 @@ nav {
   }
 }
 
-/* google iframe ↓ */
+// /* google iframe ↓ */
 
-iframe {
-  user-select: none;
-  display: flex;
-  padding: 15px 0;
-}
-
-/*  main, eikonica/introduction ↓ */
+// iframe {
+//   user-select: none;
+//   display: flex;
+//   padding: 15px 0;
+// }
 
 /*  main, programme ↓ */
 
@@ -601,8 +609,28 @@ td:last-child {
   padding: 0;
 }
 
-/*  main, concert ↓ */
-
-/*  main, food-trucks ↓ */
-
 /*  footer ↓ */
+
+a img {
+  padding-right: 50px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul a {
+  padding: 5px 0;
+}
+
+footer p {
+  padding-top: 40px;
+}
+
+.legal p {
+  font-size: 14px;
+}
+
+footer p:last-child {
+  padding-top: 0;
+}
