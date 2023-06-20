@@ -42,15 +42,11 @@
           </div>
         </div>
       </div>
+      <progress max="100" value="0"></progress>
     </header>
     <main>
       <div class="video-intro">
-        <video
-          autoplay
-          muted
-          loop
-          src="./img/eikonica_video_staruch_lisa.mp4"
-        ></video>
+        <video autoplay muted loop src="./img/eikonica-h264-after.mp4"></video>
       </div>
       <div class="text-defiling-container">
         <div class="container-fluid l-tile l-tile-green">
@@ -290,7 +286,7 @@
 
           <div class="tile-program">
             <div class="picture picture-program picture-program-left">
-              <img src="../src/img/program-sculpture.webp" alt="" />
+              <img src="../src/img/program-luna.webp" alt="" />
             </div>
             <div class="col-6">
               <h3>Samedi 14 octobre</h3>
@@ -398,10 +394,9 @@
               id="expositions"
               class="picture picture-program picture-program-right"
             >
-              <img src="../src/img/program-electric-circuit.webp" alt="" />
+              <img src="../src/img/program-code.webp" alt="" />
             </div>
           </div>
-
           <div class="tile-program">
             <div class="picture picture-program picture-program-left">
               <img src="../src/img/program-expo.webp" alt="" />
@@ -540,16 +535,18 @@
             </div>
           </div>
           <div class="col-5 offset-1">
-            <a
-              class="picutre-maps"
-              href="https://goo.gl/maps/kDFRF3axrs7CKiyH7"
-              target="_blank"
-              ><img
-                class="picture-google"
-                src="../src/img/googgle-maps-eikon.webp"
-                alt="google maps eikon"
-            /></a>
-
+            <figure class="container-picture">
+              <a
+                class="picutre-maps"
+                href="https://goo.gl/maps/kDFRF3axrs7CKiyH7"
+                target="_blank"
+                ><img
+                  class="picture-google"
+                  src="../src/img/googgle-maps-eikon.webp"
+                  alt="google maps eikon"
+              /></a>
+              <figcaption class="cover"></figcaption>
+            </figure>
             <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1365.7459757179627!2d7.1547142!3d46.7946145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e68d639070a0b%3A0x1524aaa8eaf1a445!2seikon!5e0!3m2!1sfr!2sch!4v1686223619898!5m2!1sfr!2sch"
               width="500"
@@ -568,15 +565,18 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe> -->
-            <a
-              class="picutre-maps"
-              href="https://goo.gl/maps/7rCTrdi9yyatH2Nd6"
-              target="_blank"
-              ><img
-                class="picture-google"
-                src="../src/img/googgle-maps-frison.webp"
-                alt="googgle maps fri-son"
-            /></a>
+            <figure class="container-picture">
+              <a
+                class="picutre-maps"
+                href="https://goo.gl/maps/7rCTrdi9yyatH2Nd6"
+                target="_blank"
+                ><img
+                  class="picture-google"
+                  src="../src/img/googgle-maps-frison.webp"
+                  alt="googgle maps fri-son"
+              /></a>
+              <figcaption class="cover"></figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -641,22 +641,32 @@
         <div class="row">
           <div class="col-11 offset-1">
             <h2>Partenaires</h2>
-            <a href="http://www.fri-son.ch/fr" target="_blank"
-              ><img src="../src/img/logo-fri-son.svg" alt="logo fri son"
-            /></a>
-            <a href="https://eikon.ch/" target="_blank"
-              ><img src="../src/img/logo-eikon.svg" alt="logo eikon"
-            /></a>
-            <a href="https://www.loro.ch/fr" target="_blank"
-              ><img
-                src="../src/img/logo-lotterie-romande.svg"
-                alt="logo loterie romande"
-            /></a>
-            <a href="https://www.fr.ch/" target="_blank"
-              ><img
-                src="../src/img/logo-etat-de-fribourg.svg"
-                alt="logo de l'état de fribourg"
-            /></a>
+            <div class="logo-container">
+              <a href="http://www.fri-son.ch/fr" target="_blank">
+                <div
+                  alt="logo fri son"
+                  class="logo logo-fri-son logo-fri-son-hover"
+                ></div>
+              </a>
+              <a href="https://eikon.ch/" target="_blank">
+                <div
+                  alt="logo eikon"
+                  class="logo logo-eikon logo-eikon-hover"
+                ></div>
+              </a>
+              <a href="https://www.loro.ch/fr" target="_blank">
+                <div
+                  alt="logo de la loterie romande"
+                  class="logo logo-loterie logo-loterie-hover"
+                ></div>
+              </a>
+              <a href="https://www.fr.ch/" target="_blank">
+                <div
+                  alt="logo etat de fribourg"
+                  class="logo logo-etat logo-etat-hover"
+                ></div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -665,12 +675,22 @@
         class="container-fluid l-tile-black picture-decoration-container"
       >
         <div class="row">
-          <div class="col-11 offset-1">
+          <div class="col-3 offset-1">
             <h2>Contacts</h2>
             <ul>
-              <a href="#">Linkedin</a>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
+              <a
+                href="https://www.linkedin.com/school/eikonschool/"
+                target="_blank"
+                >Linkedin</a
+              >
+              <a
+                href="https://www.instagram.com/eikon.fribourg/"
+                target="_blank"
+                >Instagram</a
+              >
+              <a href="https://www.facebook.com/eikon.fribourg" target="_blank"
+                >Facebook</a
+              >
             </ul>
             <p>
               <a href="https://goo.gl/maps/kDFRF3axrs7CKiyH7" target="_blank"

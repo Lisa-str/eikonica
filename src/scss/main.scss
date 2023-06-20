@@ -121,20 +121,6 @@ a {
   width: 50%;
 }
 
-.picture-google {
-  width: 80%;
-}
-
-.picture-google:first-child {
-  padding-bottom: 20px;
-}
-
-@media (min-width: 2000px) {
-  .picture-google {
-    width: 60%;
-  }
-}
-
 .picture-show {
   padding: 30px 12.5px 15px;
   height: 400px;
@@ -215,6 +201,46 @@ a {
 
 .picture-maps-hover {
   background-color: var(--purple);
+}
+
+/* cover ↓ */
+
+figure {
+  position: relative;
+  width: 80%;
+  margin-right: 50px;
+}
+
+figure:first-child {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 2000px) {
+  figure {
+    width: 60%;
+  }
+}
+
+.cover {
+  width: 25px;
+  height: 25px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.cover-covering {
+  width: 100%;
+  height: 100%;
+  background-color: var(--purple);
+  opacity: 60%;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  display: flex;
 }
 
 /* video ↓ */
@@ -333,7 +359,7 @@ a {
   box-shadow: 0 2px 15px #612e021a;
   background: var(--black);
   position: sticky;
-  padding: 20px;
+  padding-top: 20px;
   z-index: 1000;
   top: 0;
   color: var(--white);
@@ -355,6 +381,11 @@ nav {
   a {
     text-decoration: none;
   }
+}
+
+nav,
+h1 {
+  padding-bottom: 10px;
 }
 
 .language {
@@ -635,15 +666,12 @@ td:last-child {
 
 /*  footer ↓ */
 
-a img {
-  padding-right: 50px;
-}
 footer ul {
   display: flex;
   flex-direction: column;
 }
 
-ul a {
+footer ul a {
   padding: 5px 0;
 }
 
@@ -659,12 +687,83 @@ footer p:last-child {
   padding-top: 0;
 }
 
-// ...
+/*  footer logo ↓ */
 
-.section {
-  height: 100vh;
-  background: linear-gradient(0deg, #ccf2ff, #45cfff);
+.logo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .logo {
+    margin-right: 50px;
+  }
+}
+
+.logo-fri-son.logo-fri-son-hover:hover {
+  background-image: url("/src/img/logo-fri-son-vert.svg");
+}
+
+.logo-fri-son {
+  width: 123px;
+  height: 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/img/logo-fri-son.svg");
+}
+
+.logo-eikon.logo-eikon-hover:hover {
+  background-image: url("/src/img/logo-eikon-vert.svg");
+}
+
+.logo-eikon {
+  width: 123px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/img/logo-eikon.svg");
+}
+
+.logo-loterie.logo-loterie-hover:hover {
+  background-image: url("/src/img/logo-lotterie-romande-vert.svg");
+}
+
+.logo-loterie {
+  width: 156px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/img/logo-lotterie-romande.svg");
+}
+
+.logo-etat.logo-etat-hover:hover {
+  background-image: url("/src/img/logo-etat-de-fribourg-vert.svg");
+}
+
+.logo-etat {
+  width: 83px;
+  height: 83px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/src/img/logo-etat-de-fribourg.svg");
+}
+
+/*  progress bar ↓ */
+
+progress {
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: 0 0;
+  border: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+  border: none;
+}
+progress::-webkit-progress-value {
+  background: var(--green);
+  background-attachment: fixed;
+  border: none;
 }
