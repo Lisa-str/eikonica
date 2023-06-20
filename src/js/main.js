@@ -57,9 +57,11 @@ googleImgs.forEach((googleImg) => {
 
   googleImg.addEventListener("mouseover", () => {
     cover.classList.add("cover-covering");
+    cover.style.pointerEvents = "none";
   });
 
   googleImg.addEventListener("mouseout", () => {
     cover.classList.remove("cover-covering");
+    cover.style.pointerEvents = "auto";
   });
 });
