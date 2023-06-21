@@ -114,6 +114,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  user-select: none;
+}
+
 /* picture ↓ */
 
 .picture {
@@ -193,6 +197,7 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
+  user-select: none;
 }
 
 .picture-decoration-container {
@@ -366,6 +371,11 @@ figure:first-child {
 
   a:hover {
     color: var(--purple);
+  }
+
+  ::selection {
+    background-color: var(--green);
+    color: var(--black);
   }
 }
 
@@ -694,6 +704,7 @@ footer p:last-child {
 
   .logo {
     margin-right: 50px;
+    transition: all 0.4s ease;
   }
 }
 
